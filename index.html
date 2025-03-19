@@ -332,7 +332,7 @@
       });
 
       html2canvas(notaContainer, {
-        scale: 2 // Increase resolution by doubling the scale
+        scale: 10 // Increase resolution by doubling the scale
       }).then(canvas => {
         const imgData = canvas.toDataURL('image/png'); // Use PNG for better quality
         const link = document.createElement('a');

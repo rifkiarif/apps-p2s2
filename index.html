@@ -148,7 +148,16 @@
       height: auto;
       z-index: 10; /* Ensure it overlaps other content */
     }
-
+    
+    /* Styling for nota tagihan */
+    .nota-tagihan {
+      margin-top: 5px;
+      font-size: 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: red;
+      text-align: center;
+    }
     /* Hide delete buttons during print or export */
     @media print {
       .delete-btn {
@@ -208,6 +217,13 @@
                 <input type="number" class="form-control form-control-sm" id="itemQuantity">
               </div>
               <div class="mb-2">
+                <label for="notaType" class="form-label">Jenis Nota</label>
+                <select class="form-select form-select-sm" id="notaType">
+                  <option value="penjualan" selected>Nota Penjualan</option>
+                  <option value="tagihan">Nota Tagihan</option>
+                </select>
+              </div>
+              <div class="mb-2">
                 <label for="paymentStatus" class="form-label">Keterangan (Opsional)</label>
                 <select class="form-select form-select-sm" id="paymentStatus">
                   <option value="" selected>Tanpa Keterangan</option>
@@ -234,9 +250,9 @@
           <div class="separator"></div>
           <div id="buyerDetails" class="buyer-details"></div>
           <div class="separator"></div>
-          <h5 class="detail-nota1">---- Nota: ----</h5>
+          <h5 class="detail-nota1" id="notaTitle"></h5>
           <div id="notaItems"></div>
-          <hr style="margin: 3px 0;">
+          <div class="separator"></div>
           <div class="nota-total">
             <strong>Total Harga: <span id="totalPrice">0</span></strong>
           </div>

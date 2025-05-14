@@ -82,9 +82,9 @@ itemForm.addEventListener('submit', function(event) {
     if (!existingBuyer) {
       // If buyer details don't exist, add them
       buyerDetailsContainer.innerHTML = `
-        <p><strong>Tanggal:</strong> ${formattedDate}</p>
-        <p><strong>Nama Pembeli:</strong> ${buyerName}</p>
-        <p><strong>Alamat/Toko:</strong> ${buyerAddress}</p>
+        <p><strong>Tanggal: ${formattedDate}</strong></p>
+        <p><strong>Nama Pembeli: ${buyerName} </strong></p>
+        <p><strong>Alamat/Toko: ${buyerAddress}</strong></p>
       `;
     }
 
@@ -103,7 +103,7 @@ itemForm.addEventListener('submit', function(event) {
     if (notaType === 'tagihan') {
       notaTitleElement.textContent = '--- Nota Tagihan: ---';
     } else {
-      notaTitleElement.textContent = '--- Nota: ---';
+      notaTitleElement.textContent = '--- Nota Pembelian: ---';
     }
 
     // Update payment status display
